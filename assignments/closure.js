@@ -1,7 +1,17 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function home() {
+  //The lexical scope of mother is home() because that's where it was initially defined.Belong === Lexical
+  const mother = "Mama"
+  console.log(`My ${mother} is the best`);
 
-Im trying to write a closure lol
+  function son() {
+    console.log(`My ${mother} is the best`);
+  }//son
+  son();
+}//home
+home();
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
