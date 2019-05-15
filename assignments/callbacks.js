@@ -37,9 +37,9 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 // function last(arr, cb) {}
   // last passes the last item of the array into the callback.
   const last =(arr,cb) => {
-    cb(arr[3]);
+    cb(arr[arr.length-1]);
   };
-  last(items,lastItem =>{
+  last(items,function(lastItem){
     console.log(`The last item is ${lastItem}.`);
   });
 
@@ -64,20 +64,25 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 //function contains(item, list, cb) {}
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  const contains = (item, list, cb) {
-    for (let i=0; i<arr.length; i++){
-      if(arr[i] === list) {
-        return true;
-      } else{
-        return false;
-      };
-    }//for loop
-  }//contains function
+  // const contains = (arr, list, cb) => {
+  //   for (let i=0; i < arr.length; i++){
+  //     if(arr[i] === list) {
+  //       return true;
+  //     } else if(arr[i] !== list) {
+  //       return false;
+  //     };
+  //   };//for loop
+  // };//contains function
+  // contains(items,'Notebook', cb => {
+  //   console.log(`${Notebook} is in the array`)
+  //   console.log(`${} is not in the array`)
+      
+  // })
 
 /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
+//function removeDuplicates(array, cb) {}
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-}
+
