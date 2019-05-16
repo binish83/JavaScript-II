@@ -25,31 +25,64 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 */
 
 
-function getLength(arr, cb) {
+// function getLength(arr, cb) {}
   // getLength passes the length of the array into the callback.
-}
+  const getLength = (arr, cb) => {
+    cb(arr.length);
+  };
+  getLength(items,length =>{
+    console.log(`The length of the array is ${length}.`);
+  });
 
-function last(arr, cb) {
+// function last(arr, cb) {}
   // last passes the last item of the array into the callback.
-}
+  const last =(arr,cb) => {
+    cb(arr[arr.length-1]);
+  };
+  last(items,function(lastItem){
+    console.log(`The last item is ${lastItem}.`);
+  });
 
-function sumNums(x, y, cb) {
+//function sumNums(x, y, cb) {}
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-}
+  const sumNums = (x,y,cb) => {
+    cb(x+y);
+  };
+  sumNums(8, 20, sum =>{
+    console.log(`The sum is ${sum}`)
+  });
 
-function multiplyNums(x, y, cb) {
+//function multiplyNums(x, y, cb) {}
   // multiplyNums multiplies two numbers and passes the result to the callback.
-}
+  const multiplyNums = (x,y,cb) => {
+    cb(x*y);
+  }; 
+  multiplyNums(8, 20, multiply =>{
+    console.log(`The product is ${multiply}`)
+  });
 
-function contains(item, list, cb) {
+//function contains(item, list, cb) {}
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+  // const contains = (arr, list, cb) => {
+  //   for (let i=0; i < arr.length; i++){
+  //     if(arr[i] === list) {
+  //       return true;
+  //     } else if(arr[i] !== list) {
+  //       return false;
+  //     };
+  //   };//for loop
+  // };//contains function
+  // contains(items,'Notebook', cb => {
+  //   console.log(`${Notebook} is in the array`)
+  //   console.log(`${} is not in the array`)
+      
+  // })
 
 /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
+//function removeDuplicates(array, cb) {}
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-}
+
